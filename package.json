@@ -1,0 +1,32 @@
+{
+  "name": "simulated-annealing",
+  "version": "1.0.0",
+  "description": "Simulated Annealing optimization algorithm for node.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "author": "Sergey Averyanov",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "optimization",
+    "simulated",
+    "annealing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saveryanov/simulated-annealing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saveryanov/simulated-annealing/issues"
+  },
+  "homepage": "https://github.com/saveryanov/simulated-annealing#readme"
+}
