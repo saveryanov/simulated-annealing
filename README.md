@@ -4,6 +4,7 @@
 
 Simulated Annealing optimization algorithm for node.js.
 
+[![Simulated annealing searching for a maximum](https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif)](https://en.wikipedia.org/wiki/Simulated_annealing)
 ## Install
 
 ```commandline
