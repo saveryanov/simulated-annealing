@@ -5,7 +5,6 @@ function getEnergy(v) {
     return Math.abs(v * v - 16);
 }
 
-// copy array and invert subsequence
 function newState(x) {
     return x + (Math.random() - 0.5);
 }
