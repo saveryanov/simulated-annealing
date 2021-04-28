@@ -7,26 +7,26 @@ module.exports = function ({
     getEnergy,
 } = {}) {
     if (!isFunction(newState)) {
-        throw new Error('newState is not function.');
+        throw new Error('newState is not a function.');
     }
     if (!isFunction(getTemp)) {
-        throw new Error('getTemp is not function.');
+        throw new Error('getTemp is not a function.');
     }
     if (!isFunction(getEnergy)) {
-        throw new Error('getEnergy is not function.');
+        throw new Error('getEnergy is not a function.');
     }
 
-    var currentTemp = tempMax;
+    let currentTemp = tempMax;
     
-    var lastState = initialState;
-    var lastEnergy = getEnergy(lastState);
+    let lastState = initialState;
+    let lastEnergy = getEnergy(lastState);
 
-    var bestState = lastState;
-    var bestEnergy = lastEnergy;
+    let bestState = lastState;
+    let bestEnergy = lastEnergy;
 
     while (currentTemp > tempMin) {
-        let currentState = newState(lastState);
-        let currentEnergy = getEnergy(currentState);
+        const currentState = newState(lastState);
+        const currentEnergy = getEnergy(currentState);
 
         if (currentEnergy < lastEnergy) {
             lastState = currentState;
@@ -42,11 +42,12 @@ module.exports = function ({
             bestState = lastState;
             bestEnergy = lastEnergy;
         }
+        
         currentTemp = getTemp(currentTemp);
     }
     return bestState;
 }
 
 function isFunction(functionToCheck) {
-    return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
+    return typeof functionToCheck !== "function";
 }
